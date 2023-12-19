@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Css -->
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css">  
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+     <!-- Js -->
+  <script type="text/javascript" src="lib/bootstrap.bundle.min.js"></script>
+<link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+</head>
+<body>
+  <section class="justify-content-center py-5">
+<div class="container py-5">
+  <div class="d-flex flex-row-reverse">
+<button type="button" class="btn-close" aria-label="Close" onclick="history.back()"></button>  
+</div>
+  <div class="row py-4">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+        <img id="cardImage" src="" alt="Card image" class="img-thumbnail">
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+        <p id="cardText">
+    
+  </p>
+
+    </div>    
+  </div> 
+</div>
+</section>
+
+  <script>
+    // Get URL parameters
+    var urlParams = new URLSearchParams(window.location.search);
+
+    // Set image source and text content
+    document.querySelector('#cardImage').src = urlParams.get('image');
+    document.querySelector('#cardText').textContent = urlParams.get('text');
+
+  // Get URL parameters
+  var urlParams = new URLSearchParams(window.location.search);
+
+  // Jump to anchor link with smooth behavior
+  document.getElementById(urlParams.get('id')).scrollIntoView({behavior: 'smooth'});
+</script>
+
+</body>
+</html>
