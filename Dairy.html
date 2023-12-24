@@ -16,6 +16,8 @@
 <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
 </head>
 <body>
+         <!-- PreLoader -->
+  <div id="preloader"></div> 
   <section style="background-color: #1ba160;  height: 30px;">
 </section>
 <header>
@@ -131,5 +133,12 @@ ajinkyaventure@gmail.com
   </div>
 </section>  
 </footer>
+  <script>
+  var loader = document.getElementById("preloader");
+
+  window.addEventListener("load", function(){
+    loader.style.display = "none"
+  })
+ </script>
 </body>
 </html>
